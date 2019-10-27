@@ -1,0 +1,56 @@
+﻿<Window x:Class="McC_Espacios.MaterialD"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:McC_Espacios"
+        mc:Ignorable="d"
+        Title="MaterialD" Height="450" Width="800"
+ 
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        >
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- iccionario de recursos que proporciona estilos para la mayoría de los controles WPF
+        predeterminados y controles personalizados.-->
+
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml"/>
+                <!--Necesitamos decidir si nuestra aplicación usará el tema claro u oscuro, y agregar el diccionario de recursos apropiado.-->
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <!-- o oscuro 
+        	
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Dark.xaml" />
+        -->
+
+                <!-- 
+        Ahora, debemos seleccionar los colores primarios y secundarios que usará nuestra aplicación.
+        Puede encontrar una lista de diccionarios de recursos de colores primarios y de acento en el 
+        repositorio de GitHub aquí y aquí . 
+        Para este ejemplo, usemos azul para el color primario y púrpura para el color de acento.
+        -->
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Green.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+
+
+
+    </Window.Resources>
+    <Grid>
+        <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Content="Button" HorizontalAlignment="Left" Margin="85,75,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Style="{StaticResource MaterialDesignRaisedButton}" Content="Button" HorizontalAlignment="Left" Margin="235,75,0,0" VerticalAlignment="Top" Width="85"/>
+        <Button Style="{StaticResource MaterialDesignRaisedDarkButton}" Content="Button" HorizontalAlignment="Left" Margin="435,75,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Style="{StaticResource MaterialDesignRaisedAccentButton}" Content="Button" HorizontalAlignment="Left" Margin="640,75,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Style="{StaticResource MaterialDesignRaisedAccentButton}"
+    Width="100"
+    Content="ACCENT" Margin="320,160,372,227"/>
+        <Button Style="{StaticResource miBoton}" Content="Button MaterialDesigner " HorizontalAlignment="Left" Margin="70,285,0,0" VerticalAlignment="Top" Width="275" Height="60"/>
+        <Button Style="{StaticResource otroBoton}" Content="Button Sin MAterialDesigner" HorizontalAlignment="Left" Margin="380,285,0,0" VerticalAlignment="Top" Width="310" Height="75"/>
+
+    </Grid>
+</Window>
